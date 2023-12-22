@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AuthScreen extends StatefulWidget {
+  static const String routeName = "/auth-screen";
   const AuthScreen({super.key});
 
   @override
@@ -10,7 +11,6 @@ class AuthScreen extends StatefulWidget {
 class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
-    Navigator.pushNamed(context, "",arguments: )
     return Scaffold(
 
     );

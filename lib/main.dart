@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/constants/global_variables.dart';
+import 'package:shopping_app/features/auth/screens/auth_screen.dart';
+import 'package:shopping_app/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      // onGenerateRoute: ,
+      onGenerateRoute: (settings)=> generateRoute(settings),
       home: Scaffold(
         appBar: AppBar(backgroundColor: GlobalVariables.secondaryColor,
           title: Text("E-COMMERCE"),
@@ -34,9 +36,17 @@ class MyApp extends StatelessWidget {
             children: [
               Center(child: Text("hello")
               ),
-              ElevatedButton(onPressed: (){}, child: Text('click')),
+              Builder(
+                builder: (context) {
+                  return ElevatedButton(onPressed: (){
+                    Navigator.pushNamed(context,AuthScreen.routeName);
+                  },
+                      child: Text('click'),
+                  );
+                }
+              ),
             ],
-          )
+          ),
       ),
     );
   }
