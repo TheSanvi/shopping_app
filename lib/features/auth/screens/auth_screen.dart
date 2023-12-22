@@ -74,7 +74,7 @@ void dispose(){
                 child:Column(
                   children: [
                     CustomTextField(controller: _nameController,
-                      hintText: 'Nmae',
+                      hintText: 'Name',
                     ),
                     SizedBox(height:10),
                     CustomTextField(controller: _emailController,
