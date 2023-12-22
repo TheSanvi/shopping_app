@@ -28,26 +28,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       onGenerateRoute: (settings)=> generateRoute(settings),
-      home: Scaffold(
-        appBar: AppBar(backgroundColor: GlobalVariables.secondaryColor,
-          title: Text("E-COMMERCE"),
-        ),
-          body: Column(
-            children: [
-              Center(child: Text("hello")
-              ),
-              Builder(
-                builder: (context) {
-                  return ElevatedButton(onPressed: (){
-                    Navigator.pushNamed(context,AuthScreen.routeName);
-                  },
-                      child: Text('click'),
-                  );
-                }
-              ),
-            ],
-          ),
-      ),
+      home: AuthScreen(),
     );
   }
 }
